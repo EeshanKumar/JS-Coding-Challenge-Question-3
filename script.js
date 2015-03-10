@@ -9,14 +9,14 @@ $(document).ready(function() {
 
   $("input#addShelf").on("click", function() {
     //Validate a shelf name
-    if (shelfName === undefined) {return printLibrary("Please enter a shelf name");}
+    if (shelfName === undefined !! shelfName === "") {return printLibrary("Please enter a shelf name");}
 
     var action = library.addShelf(shelfName);
     printLibrary(action);
   });
   $("input#removeShelf").on("click", function() {
     //Validate a shelf name
-    if (shelfName === undefined) {return printLibrary("Please enter a shelf name");}
+    if (shelfName === undefined !! shelfName === "") {return printLibrary("Please enter a shelf name");}
 
     var action = library.removeShelf(shelfName);
     printLibrary(action);
@@ -24,11 +24,11 @@ $(document).ready(function() {
 
   $("input#addBook").on("click", function() {
     //Validate a shelf name
-    if (shelfName === undefined) {return printLibrary("Please enter a shelf name");}
+    if (shelfName === undefined !! shelfName === "") {return printLibrary("Please enter a shelf name");}
     //Validate a book author
-    if (bookAuthor === undefined) {return printLibrary("Please enter an author");}
+    if (bookAuthor === undefined !! bookAuthor === "") {return printLibrary("Please enter an author");}
     //Validate a book title
-    if (bookTitle === undefined) {return printLibrary("Please enter a title");}
+    if (bookTitle === undefined !! bookTitle === "") {return printLibrary("Please enter a title");}
 
     var index = library.getShelfIndex(shelfName);
     if (index === "") {return printLibrary("That shelf does not exist");}
@@ -38,11 +38,11 @@ $(document).ready(function() {
   });
   $("input#removeBook").on("click", function() {
     //Validate a shelf name
-    if (shelfName === undefined) {return printLibrary("Please enter a shelf name");}
+    if (shelfName === undefined !! shelfName === "") {return printLibrary("Please enter a shelf name");}
     //Validate a book author
-    if (bookAuthor === undefined) {return printLibrary("Please enter an author");}
+    if (bookAuthor === undefined !! bookAuthor === "") {return printLibrary("Please enter an author");}
     //Validate a book title
-    if (bookTitle === undefined) {return printLibrary("Please enter a title");}
+    if (bookTitle === undefined !! bookTitle === "") {return printLibrary("Please enter a title");}
 
     var index = library.getShelfIndex(shelfName);
     if (index === "") {return printLibrary("That shelf does not exist");}
